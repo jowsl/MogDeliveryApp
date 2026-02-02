@@ -89,6 +89,10 @@ Digite o nome do item: Windtea Leaves
 - Respeite os rate limits do Universalis
 - Intervalo de 10 minutos entre verificações
 
+## Features futuras
+- Tratar o app epara que funcione como um chatbot que pode interagir por comandos via discord.
+- Formular uma versão interativa com interface para rodar tanto no linux quando no windows.
+
 ## Licença
 
 Este projeto é para fins educacionais e pessoais. Use por sua conta e risco.
