@@ -3,7 +3,7 @@ import time
 import json
 import signal
 
-discord_url = "https://discord.com/api/webhooks/1449506737592729724/oX58eCUnUfEV02wPxobZP-SGj3w7wD68EO1lopyQsD8j9laciJzmolpoVe4L8_9oLkKq"
+discord_url = "" #aqui entra o seu webhook do discord
 
 def timeout_adicionar_item(signum, frame):
     raise TimeoutError
@@ -27,8 +27,8 @@ def carregar():
     
 
 
-def enviar_alerta(nome_item, preco, mundo, item_id):
-    mensagem_texto = f"\n🚨 **ALERTA DE PREÇO!** 🚨\n\n<@113329355618258944>, o item **{nome_item}** está custando **{preco:,} **!\n 🌎: **{mundo}**\nhttps://universalis.app/market/{item_id}"
+def enviar_alerta(nome_item, preco, mundo, item_id):    # a chave de usuário é privada de cada um
+    mensagem_texto = f"\n🚨 **ALERTA DE PREÇO!** 🚨\n\n<CHAVE DE USUARIO DO DISCORD>, o item **{nome_item}** está custando **{preco:,} **!\n 🌎: **{mundo}**\nhttps://universalis.app/market/{item_id}"
     
     dados = {
         "content": mensagem_texto
@@ -124,10 +124,9 @@ def main():
                 id = input("Qual o ID: ")
                 preco_max = int(input("Valor máximo: "))
                 nome = input("Qual o nome: ")
-                lista_de_itens.append(
-                    {"id": id, "max": preco_max, "nome": nome}
-                )
-                resultado = priceVerifier(item, 1)
+                novo_item = {"id": id, "max": preco_max, "nome": nome}
+                lista_de_itens.append(novo_item)
+                resultado = priceVerifier(novo_item, 1)
                 salvar(lista_de_itens)
                 continue
 
