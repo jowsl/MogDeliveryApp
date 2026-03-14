@@ -12,13 +12,13 @@ signal.signal(signal.SIGALRM, timeout_adicionar_item)
 
 
 def salvar(lista_de_itens):
-    path = "itens.txt"
+    path = "itens.json"
     with open(path, "w", encoding="utf-8") as arq:
         json.dump(lista_de_itens, arq, ensure_ascii=False, indent=4)
         print("Novo item adicionado ")
 
 def carregar():
-    path="itens.txt"
+    path="itens.json"
     try:
         with open(path, "r", encoding="utf-8") as arquivo:
             return json.load(arquivo)
