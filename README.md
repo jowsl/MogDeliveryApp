@@ -6,7 +6,7 @@ Monitor automático de preços do Market Board do Final Fantasy XIV usando a API
 
 - **Monitoramento Contínuo**: Verifica preços automaticamente a cada ~10 minutos
 - **Alertas Discord**: Notificações instantâneas via Webhook quando o preço alvo é atingido
-- **Persistência**: Lista de itens salva em `itens.txt` (formato como de um JSON)
+- **Persistência**: Lista de itens salva em `itens.json`
 - **Adicionar Items em Tempo Real**: Janela interativa de 30 segundos entre ciclos
 
 ## Requisitos
